@@ -257,6 +257,7 @@
       success.innerHTML = `<span class="success-icon">${S.icon("check")}</span>
         <h3 class="h3">${S.tt("Demande envoyée.", "Request sent.")}</h3>
         <p class="muted">${S.tt("Merci ! Nous vous revenons avec un prix ferme, tout compris.", "Thank you! We'll get back to you with a firm, all-in price.")}</p>
+        ${window.SPARTAN_CONFIG.previewMode ? `<p class="preview-note">${S.tt("Aperçu de conception : aucune donnée n'a été envoyée.", "Design preview: no data was sent.")}</p>` : ""}
         <button class="btn btn-dark" type="button" data-close>${S.tt("Continuer à magasiner", "Keep browsing")}</button>`;
       state.cart = {};
       save();

@@ -40,6 +40,10 @@ window.SPARTAN_CONFIG = {
      success screen, and the payload is printed to the browser console. */
   formEndpoint: "",
 
+  // Design-preview mode: shows a "TGS design preview" banner on every page and
+  // tells visitors that forms send nothing. Keep false on the live site.
+  previewMode: false,
+
   // French first (Charter of the French Language / Bill 96). English is the option.
   defaultLang: "fr",
 };

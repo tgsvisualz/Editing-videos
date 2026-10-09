@@ -226,6 +226,15 @@
     document.body.insertAdjacentHTML("afterbegin", html);
   }
 
+  function renderPreviewBanner() {
+    if (!C.previewMode) return;
+    document.body.classList.add("preview-mode");
+    document.body.insertAdjacentHTML("afterbegin",
+      `<div class="preview-banner" role="note">${bi(
+        "Aperçu de conception par TGS Productions pour Spartan Protection Incendie — ce n'est pas le site officiel. Les formulaires n'envoient rien.",
+        "Design preview by TGS Productions for Spartan Fire Protection — not the official website. Forms send nothing.")}</div>`);
+  }
+
   function renderActionBar(page) {
     if (page === "request") return;
     document.body.classList.add("has-action-bar");
@@ -422,6 +431,7 @@
     renderHeader(page);
     renderFooter();
     renderActionBar(page);
+    renderPreviewBanner();
     fillConfig();
     captureAttribution();
     initMenu();

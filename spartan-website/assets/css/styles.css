@@ -277,7 +277,7 @@ html[lang="en"] .lang-toggle .lang-thumb { transform: translateX(100%); }
   background: var(--white); border: 1px solid var(--line); box-shadow: var(--sh-1);
   font-size: 14px; font-weight: 600; color: var(--ink-2);
 }
-.chip-badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: var(--r-pill); background: var(--black); color: #fff; font-size: 12px; letter-spacing: .04em; }
+.chip-badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: var(--r-pill); background: var(--black); color: #fff; font-size: 12px; letter-spacing: .04em; }
 .chip-badge .pulse-dot { color: #ff6a3d; width: 6px; height: 6px; }
 .trust-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; color: var(--muted); font-size: 14px; font-weight: 600; letter-spacing: .04em; }
 .trust-row span { display: inline-flex; align-items: center; gap: 7px; }
@@ -728,6 +728,22 @@ a.card:hover, .card.is-hoverable:hover { transform: translateY(-4px); box-shadow
 .mobile-menu-meta .socials { margin-top: 0; }
 .mobile-menu-meta .socials a { background: rgba(14,13,13,.06); }
 @media (max-width: 960px) { .social-grid { grid-template-columns: 1fr; } }
+
+/* Design-preview banner (config.previewMode) */
+.preview-banner {
+  position: fixed; inset: 0 0 auto; z-index: 120; padding: 7px 16px calc(7px) ;
+  padding-top: calc(7px + env(safe-area-inset-top, 0px));
+  background: var(--black); color: var(--cream); text-align: center;
+  font-size: 13px; font-weight: 600; line-height: 1.35; letter-spacing: .01em;
+}
+.preview-mode .site-header { top: calc(46px + env(safe-area-inset-top, 0px)); }
+.preview-mode .hero, .preview-mode .page-hero { margin-top: 34px; }
+.preview-note { margin-top: 6px; padding: 8px 14px; border-radius: var(--r-pill); background: rgba(238,149,39,.14); color: var(--flame); font-size: 14px; font-weight: 600; }
+@media (max-width: 640px) {
+  .preview-banner { font-size: 11.5px; }
+  .preview-mode .site-header { top: calc(54px + env(safe-area-inset-top, 0px)); }
+  .preview-mode .hero, .preview-mode .page-hero { margin-top: 48px; }
+}
 
 /* ---------- Prose (privacy) ---------- */
 .prose { max-width: 760px; }

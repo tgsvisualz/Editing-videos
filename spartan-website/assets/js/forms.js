@@ -120,6 +120,9 @@
     if (!success) return;
     form.hidden = true;
     success.hidden = false;
+    if (C.previewMode && !success.querySelector(".preview-note")) {
+      success.insertAdjacentHTML("beforeend", `<p class="preview-note">${S.tt("Aperçu de conception : aucune donnée n'a été envoyée.", "Design preview: no data was sent.")}</p>`);
+    }
     success.scrollIntoView({ behavior: "smooth", block: "center" });
     const h = success.querySelector("h2, h3");
     if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); }
