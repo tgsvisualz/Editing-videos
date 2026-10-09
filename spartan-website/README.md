@@ -26,8 +26,8 @@ Plain HTML, CSS and JavaScript, with no build step and no dependencies. It runs 
    - Same-business-day callback promise
    - The quoted Google review (home page)
    - Job posting details: from $23/h, 40 h/week, RRSP matching, health insurance
-   - Social links: Instagram handle `@spartanfireprotection` and Facebook page
-4. **Domain.** Update the `url`/`logo` fields in the JSON-LD block of `index.html`, plus `sitemap.xml`, if the final domain is not `www.spartanfire.ca`.
+4. **Social pages.** Instagram (`@spartanincendie`), Facebook and LinkedIn are set in `config.js` under `social`. They appear in the footer, the mobile menu, and the "Follow us" sections on the home, about, careers and contact pages. The LinkedIn URL (`linkedin.com/company/spartan-protection-incendie`) is the planned address: update it once TGS creates the page. Clear a value to hide that network everywhere.
+5. **Domain.** Update the `url`/`logo` fields in the JSON-LD block of `index.html`, plus `sitemap.xml`, if the final domain is not `www.spartanfire.ca`.
 
 ## Editing content
 

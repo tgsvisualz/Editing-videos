@@ -21,9 +21,11 @@ window.SPARTAN_CONFIG = {
     mapsQuery: "5637 Chemin Saint-François, Saint-Laurent, QC H4S 1W6",
   },
 
+  // Social pages (managed by TGS). Leave a value empty to hide that network.
   social: {
-    instagram: "https://www.instagram.com/spartanfireprotection/",
-    facebook: "https://www.facebook.com/spartanfirepro/",
+    instagram: "https://www.instagram.com/spartanincendie/",
+    facebook: "https://www.facebook.com/p/Spartan-Protection-Incendie-100063527651581/",
+    linkedin: "https://www.linkedin.com/company/spartan-protection-incendie/",
   },
 
   /* Form delivery

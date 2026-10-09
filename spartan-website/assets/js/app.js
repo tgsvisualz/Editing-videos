@@ -61,6 +61,7 @@
     siren: '<path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1M18.5 4.5 18 5M2 12h1M12 2v1M4.929 4.929l.707.707M12 12v6"/>',
     instagram: '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>',
     facebook: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+    linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
     gauge: '<path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/>',
     door: '<path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/>',
     lightbulb: '<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6M10 22h4"/>',
@@ -160,6 +161,27 @@
   const bi = (fr, en, tag = "span", attrs = "") => `<${tag}${attrs ? " " + attrs : ""} data-en="${esc(en)}">${fr}</${tag}>`;
   S.bi = bi;
 
+  /* Social links: icon buttons (footer, menu) or labelled cards ([data-socials]). */
+  const SOCIALS = [
+    ["instagram", "Instagram", "@spartanincendie"],
+    ["facebook", "Facebook", "Spartan Protection Incendie"],
+    ["linkedin", "LinkedIn", "Spartan Protection Incendie"],
+  ];
+  const activeSocials = () => SOCIALS.filter(([k]) => C.social && C.social[k]);
+  function socialIcons() {
+    return `<div class="socials">${activeSocials().map(([k, name]) =>
+      `<a href="${C.social[k]}" target="_blank" rel="noopener" aria-label="${name}">${S.icon(k, "icon icon-sm")}</a>`).join("")}</div>`;
+  }
+  function socialCards() {
+    return activeSocials().map(([k, name, handle]) =>
+      `<a class="social-card" href="${C.social[k]}" target="_blank" rel="noopener">
+        <span class="social-icon is-${k}">${S.icon(k)}</span>
+        <span><strong>${name}</strong><small>${handle}</small></span>
+        ${S.icon("arrow-up-right", "icon icon-sm social-arrow")}
+      </a>`).join("");
+  }
+  S.socialIcons = socialIcons;
+
   function langToggle() {
     return `<div class="lang-toggle" role="group" aria-label="Langue / Language">
       <span class="lang-thumb" aria-hidden="true"></span>
@@ -198,7 +220,7 @@
         <div class="mobile-menu-foot">
           <a class="btn btn-primary btn-lg btn-block" href="request.html">${bi("Demander une inspection", "Request an inspection")}${S.icon("arrow-right", "icon icon-arrow")}</a>
           <a class="btn btn-emergency btn-lg btn-block" href="${C.phoneHref}">${S.icon("phone")}${bi("Urgence 24 h", "24 h emergency")} · ${C.phone}</a>
-          <div class="mobile-menu-meta">${langToggle()}<span>RBQ ${C.rbq}</span></div>
+          <div class="mobile-menu-meta">${langToggle()}${socialIcons()}</div>
         </div>
       </div>`;
     document.body.insertAdjacentHTML("afterbegin", html);
@@ -234,10 +256,7 @@
             <div class="footer-brand">
               <img src="assets/img/logo-wordmark.webp" alt="Spartan Protection Incendie" width="200" height="72" loading="lazy">
               ${bi("Alarme incendie, gicleurs, électricité, extincteurs, sécurité et contrôle d'accès — un seul appel pour tout le bâtiment, partout dans le Grand Montréal.", "Fire alarm, sprinklers, electrical, extinguishers, security and access control — one call for the whole building, across Greater Montreal.", "p")}
-              <div class="socials">
-                <a href="${C.social.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${S.icon("facebook", "icon icon-sm")}</a>
-                <a href="${C.social.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${S.icon("instagram", "icon icon-sm")}</a>
-              </div>
+              ${socialIcons()}
             </div>
             <div class="footer-col">${bi("Services", "Services", "h3")}<ul>${svc}</ul></div>
             <div class="footer-col">${bi("Entreprise", "Company", "h3")}<ul>
@@ -383,6 +402,7 @@
 
   /* Fill [data-c="phone"] etc. from config */
   function fillConfig() {
+    document.querySelectorAll("[data-socials]").forEach((el) => (el.innerHTML = socialCards()));
     document.querySelectorAll("[data-c]").forEach((el) => {
       const k = el.dataset.c;
       const map = { phone: C.phone, rbq: C.rbq, street: C.address.street, city: `${C.address.city}, ${C.address.region} ${C.address.postal}`, legal: C.legalName };
