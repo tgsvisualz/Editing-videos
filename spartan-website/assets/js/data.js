@@ -191,14 +191,14 @@
     {
       id: "ext-co2-10", cat: "extinguishers", photo: wm("10lb._CO2_Fire_Extinguisher.jpg"), badge: L("Sans résidu", "No residue"),
       name: L("Extincteur CO₂ 10 lb", "CO₂ extinguisher, 10 lb"),
-      desc: L("Pour salles électriques, salles de serveurs et laboratoires : aucun résidu.", "For electrical rooms, server rooms and labs — leaves no residue."),
+      desc: L("Pour salles électriques, salles de serveurs et laboratoires\u00a0: aucun résidu.", "For electrical rooms, server rooms and labs — leaves no residue."),
       specs: [[L("Agent", "Agent"), L("Dioxyde de carbone", "Carbon dioxide")], [L("Classes de feu", "Fire classes"), L("B · C", "B · C")], [L("Usage", "Use"), L("Électrique, serveurs, labos", "Electrical, servers, labs")]],
       art: () => art.extinguisher({ body: "#1d1b1a", label: "CO₂", horn: true }),
     },
     {
       id: "ext-k-6", cat: "extinguishers",
       name: L("Extincteur classe K 6 L", "Class K extinguisher, 6 L"),
-      desc: L("Agent humide pour les cuisines commerciales : graisses et huiles de cuisson.", "Wet agent for commercial kitchens — cooking oils and fats."),
+      desc: L("Agent humide pour les cuisines commerciales\u00a0: graisses et huiles de cuisson.", "Wet agent for commercial kitchens — cooking oils and fats."),
       specs: [[L("Agent", "Agent"), L("Agent humide (acétate de potassium)", "Wet chemical (potassium acetate)")], [L("Classes de feu", "Fire classes"), L("A · K", "A · K")], [L("Usage", "Use"), L("Restaurants, cuisines commerciales", "Restaurants, commercial kitchens")]],
       art: () => art.extinguisher({ steel: true, label: "K" }),
     },
@@ -219,7 +219,7 @@
     {
       id: "exit-combo", cat: "lighting",
       name: L("Combo sortie + éclairage d'urgence", "Exit sign + emergency light combo"),
-      desc: L("Deux fonctions dans un seul boîtier : idéal pour les rénovations.", "Two functions, one housing — ideal for retrofits."),
+      desc: L("Deux fonctions dans un seul boîtier\u00a0: idéal pour les rénovations.", "Two functions, one housing — ideal for retrofits."),
       specs: [[L("Fonctions", "Functions"), L("Enseigne + 2 têtes DEL", "Sign + 2 LED heads")], [L("Batterie", "Battery"), L("Intégrée", "Built-in")]],
       art: () => art.exitSign({ combo: true }),
     },
@@ -311,7 +311,7 @@
       id: "svc-recharge", cat: "services", photo: local("extinguisher-shop"), badge: L("Atelier", "In-house"),
       name: L("Recharge et essai hydrostatique", "Recharge & hydrostatic testing"),
       desc: L("Entretien à 6 ans et essai hydrostatique à 12 ans, faits dans notre atelier.", "6-year maintenance and 12-year hydrostatic test, done in our own shop."),
-      specs: [[L("Entretien", "Maintenance"), L("1, 6 et 12 ans", "1, 6 and 12 years")], [L("Lieu", "Where"), L("Atelier de Saint-Laurent", "Saint-Laurent shop")]],
+      specs: [[L("Entretien", "Maintenance"), L("1, 6 et 12 ans", "1, 6 and 12 years")], [L("Lieu", "Location"), L("Atelier de Saint-Laurent", "Saint-Laurent shop")]],
       art: () => art.service("wrench"),
     },
   ];
@@ -335,8 +335,8 @@
       ],
       requirements: [
         L("Bilingue français et anglais", "Bilingual French and English"),
-        L("Expérience en inspection, service ou installation : un atout", "Inspection, service or installation experience: an asset"),
-        L("Certification ACAI (CFAA) : un atout — nous formons la bonne personne", "CFAA certification: an asset — we train the right person"),
+        L("Expérience en inspection, service ou installation\u00a0: un atout", "Inspection, service or installation experience: an asset"),
+        L("Certification ACAI (CFAA)\u00a0: un atout — nous formons la bonne personne", "CFAA certification: an asset — we train the right person"),
         L("Fiable, motivé(e), à l'aise sur les chantiers", "Reliable, motivated, comfortable on job sites"),
       ],
       benefits: [

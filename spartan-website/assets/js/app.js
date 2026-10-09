@@ -204,7 +204,7 @@
             <nav class="nav-links" aria-label="Principal" data-en-aria-label="Main">${links}</nav>
             <div class="nav-actions">
               ${langToggle()}
-              <a class="btn btn-sm btn-emergency hide-md" href="${C.phoneHref}"><span class="pulse-dot" aria-hidden="true"></span>${bi("Urgence 24 h", "24 h emergency")}</a>
+              <a class="btn btn-sm btn-emergency hide-md" href="emergency.html"${page === "emergency" ? ' aria-current="page"' : ""}><span class="pulse-dot" aria-hidden="true"></span>${bi("Urgence 24 h", "24/7 Emergency")}</a>
               <a class="btn btn-sm btn-dark hide-md" href="request.html">${bi("Demander une inspection", "Request an inspection")}</a>
               <button class="nav-burger" type="button" aria-label="Ouvrir le menu" data-en-aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">${S.icon("menu")}</button>
             </div>
@@ -219,7 +219,8 @@
         <nav aria-label="Mobile">${`<a href="index.html"${page === "home" ? ' aria-current="page"' : ""}>${bi("Accueil", "Home")}${S.icon("arrow-up-right")}</a>`}${mlinks}</nav>
         <div class="mobile-menu-foot">
           <a class="btn btn-primary btn-lg btn-block" href="request.html">${bi("Demander une inspection", "Request an inspection")}${S.icon("arrow-right", "icon icon-arrow")}</a>
-          <a class="btn btn-emergency btn-lg btn-block" href="${C.phoneHref}">${S.icon("phone")}${bi("Urgence 24 h", "24 h emergency")} · ${C.phone}</a>
+          <a class="btn btn-emergency btn-lg btn-block" href="emergency.html">${S.icon("siren")}${bi("Signaler une urgence 24 h", "Report a 24/7 Emergency")}</a>
+          <a class="btn btn-ghost btn-lg btn-block" href="${C.phoneHref}">${S.icon("phone")}${C.phone}</a>
           <div class="mobile-menu-meta">${langToggle()}${socialIcons()}</div>
         </div>
       </div>`;
@@ -236,12 +237,12 @@
   }
 
   function renderActionBar(page) {
-    if (page === "request") return;
+    if (page === "request" || page === "emergency") return;
     document.body.classList.add("has-action-bar");
     document.body.insertAdjacentHTML(
       "beforeend",
       `<div class="action-bar" aria-label="Actions rapides" data-en-aria-label="Quick actions">
-        <a class="btn btn-call" href="${C.phoneHref}">${S.icon("phone")}${bi("Appeler", "Call")}</a>
+        <a class="btn btn-emergency" href="emergency.html">${S.icon("siren")}${bi("Urgence", "Emergency")}</a>
         <a class="btn btn-primary" href="request.html">${bi("Demande d'inspection", "Request inspection")}</a>
       </div>`
     );
@@ -273,11 +274,12 @@
               <li><a href="careers.html">${bi("Carrières", "Careers")}</a></li>
               <li><a href="shop.html">${bi("Boutique", "Shop")}</a></li>
               <li><a href="request.html">${bi("Demande d'inspection", "Inspection request")}</a></li>
+              <li><a href="emergency.html">${bi("Signaler une urgence", "Report an Emergency")}</a></li>
               <li><a href="contact.html">${bi("Contact", "Contact")}</a></li>
             </ul></div>
             <div class="footer-col">${bi("Nous joindre", "Reach us", "h3")}<ul>
               <li><a href="${C.phoneHref}"><strong style="color:#fff">${C.phone}</strong></a></li>
-              <li>${bi("Urgences 24 h / 7 j", "24/7 emergencies")}</li>
+              <li><a href="emergency.html">${bi("Urgences 24 h / 7 j", "24/7 Emergencies")}</a></li>
               ${email}
               <li><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(C.address.mapsQuery)}" target="_blank" rel="noopener">${C.address.street}<br>${C.address.city}, ${C.address.region} ${C.address.postal}</a></li>
             </ul></div>
@@ -312,6 +314,15 @@
   }
 
   function initLangToggles() {
+    // Carry English across pages even where browser storage is unavailable.
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[href]");
+      if (!a || S.lang() !== "en") return;
+      const href = a.getAttribute("href");
+      if (!/^[\w-]+\.html(\?[^#]*)?(#.*)?$/.test(href) || /[?&]lang=/.test(href)) return;
+      const [path, hash = ""] = href.split("#");
+      a.setAttribute("href", path + (path.includes("?") ? "&" : "?") + "lang=en" + (hash ? "#" + hash : ""));
+    }, true);
     document.addEventListener("click", (e) => {
       const b = e.target.closest(".lang-toggle button");
       if (!b || b.dataset.lang === S.lang()) return;
@@ -438,7 +449,7 @@
     initLangToggles();
     initScrollState();
     initAccordions();
-    applyLang(initialLang(), { persist: false });
+    applyLang(initialLang());
     initTabs();
     initReveal();
     S.booted = true;

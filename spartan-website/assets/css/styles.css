@@ -100,7 +100,8 @@ ul, ol { padding: 0; list-style: none; }
 .section-cream { background: var(--cream); }
 .section-white { background: var(--white); }
 
-.stack > * + * { margin-top: var(--stack, 16px); }
+.stack { display: flex; flex-direction: column; align-items: flex-start; gap: var(--stack, 16px); }
+.stack > :not(a):not(span):not(strong):not(small):not(img):not(.btn), .stack > .btn-block, .stack > .social-card { align-self: stretch; }
 .center { text-align: center; }
 .mx-auto { margin-inline: auto; }
 
@@ -866,3 +867,29 @@ a.card:hover, .card.is-hoverable:hover { transform: translateY(-4px); box-shadow
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Contact: big emergency number */
+.phone-contact { font-family: var(--font-display); font-size: clamp(36px, 4vw, 46px); line-height: 1; color: #fff; letter-spacing: .01em; white-space: nowrap; }
+.phone-contact:hover { color: var(--ember); }
+.contact-item > div { min-width: 0; }
+.contact-item a, .contact-item span.v { display: block; }
+
+/* ---------- Emergency report page ---------- */
+.alert-911 {
+  display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; padding: 16px 20px;
+  border-radius: var(--r-md); background: rgba(211, 39, 31, .08); border: 1px solid rgba(211, 39, 31, .25); color: var(--ink);
+}
+.alert-911 p { line-height: 1.45; }
+.alert-911 strong { color: var(--red); }
+.alert-911-icon { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--red); color: #fff; flex: none; }
+.em-step { display: grid; gap: 18px; }
+.em-step + .em-step { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+.em-head { display: flex; align-items: center; gap: 12px; }
+.em-head h2 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; letter-spacing: -.01em; line-height: 1.15; }
+.em-num { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; flex: none; background: var(--red); color: #fff; font-weight: 700; font-size: 15px; }
+.em-flow { display: grid; gap: 12px; counter-reset: em; }
+.em-flow li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; font-size: 15px; }
+.em-flow li::before { counter-increment: em; content: counter(em); width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--paper); font-weight: 700; font-size: 13px; color: var(--flame); }
+.em-flow strong { font-weight: 600; }
+.page-hero .inner > span, .page-hero .inner > .chip { justify-self: start; }
+.page-hero.center .inner > span, .page-hero.center .inner > .chip { justify-self: center; }

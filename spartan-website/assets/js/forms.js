@@ -121,7 +121,7 @@
     form.hidden = true;
     success.hidden = false;
     if (C.previewMode && !success.querySelector(".preview-note")) {
-      success.insertAdjacentHTML("beforeend", `<p class="preview-note">${S.tt("Aperçu de conception : aucune donnée n'a été envoyée.", "Design preview: no data was sent.")}</p>`);
+      success.insertAdjacentHTML("beforeend", `<p class="preview-note">${S.tt("Aperçu de conception\u00a0: aucune donnée n'a été envoyée.", "Design preview: no data was sent.")}</p>`);
     }
     success.scrollIntoView({ behavior: "smooth", block: "center" });
     const h = success.querySelector("h2, h3");

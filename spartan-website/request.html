@@ -49,13 +49,13 @@
                 <div class="choice"><input type="radio" name="type" id="t-installation" value="installation"><label for="t-installation"><span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></span><span class="choice-title"><span data-en="Installation">Installation</span><small data-en="New system or upgrade">Nouveau système ou mise à niveau</small></span><span class="choice-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></label></div>
                 <div class="choice"><input type="radio" name="type" id="t-repair" value="repair"><label for="t-repair"><span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></span><span class="choice-title"><span data-en="Service call / repair">Appel de service / réparation</span><small data-en="Trouble, deficiency, breakdown">Trouble, déficience, bris</small></span><span class="choice-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></label></div>
                 <div class="choice"><input type="radio" name="type" id="t-quote" value="quote"><label for="t-quote"><span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-file-check"/></svg></span><span class="choice-title"><span data-en="Free estimate">Estimation gratuite</span><small data-en="Quote for a project">Soumission pour un projet</small></span><span class="choice-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></label></div>
-                <div class="choice"><input type="radio" name="type" id="t-contract" value="contract"><label for="t-contract"><span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="choice-title"><span data-en="Annual contract">Contrat annuel</span><small data-en="One contract, whole building">Un contrat, tout le bâtiment</small></span><span class="choice-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></label></div>
+                <div class="choice"><input type="radio" name="type" id="t-contract" value="contract"><label for="t-contract"><span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="choice-title"><span data-en="Annual contract">Contrat annuel</span><small data-en="One contract, the whole building">Un contrat, tout le bâtiment</small></span><span class="choice-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></label></div>
                 <div class="choice is-emergency"><input type="radio" name="type" id="t-emergency" value="emergency"><label for="t-emergency"><span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-siren"/></svg></span><span class="choice-title"><span data-en="Emergency">Urgence</span><small data-en="Happening right now">En ce moment</small></span><span class="choice-mark"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></label></div>
               </div>
               <div class="card card-dark" data-emergency-callout hidden style="display:grid;gap:12px;border-radius:var(--r-md)">
-                <strong style="font-size:18px" data-en="For an emergency, call now — someone answers 24/7.">Pour une urgence, appelez maintenant — quelqu'un répond 24 h / 7 j.</strong>
+                <strong style="font-size:18px" data-en="Emergency in progress? Use the 30-second Emergency form, or call — someone answers 24/7.">Urgence en cours&nbsp;? Utilisez le formulaire d'urgence de 30 secondes, ou appelez — quelqu'un répond 24 h / 7 j.</strong>
                 <span class="muted small" data-en="If an alarm is sounding or there's fire or smoke, call 911 first.">Si une alarme sonne ou s'il y a du feu ou de la fumée, composez d'abord le 911.</span>
-                <div class="btn-row"><a class="btn btn-emergency" href="tel:+15147726600"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>514-772-6600</a><span class="muted small" data-en="Or continue the form below.">Ou continuez le formulaire.</span></div>
+                <div class="btn-row on-dark"><a class="btn btn-emergency" href="emergency.html"><svg class="icon" aria-hidden="true"><use href="#i-siren"/></svg><span data-en="Open the Emergency form (30 s)">Ouvrir le formulaire d'urgence (30 s)</span></a><a class="btn btn-ghost" href="tel:+15147726600"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>514-772-6600</a></div>
               </div>
             </fieldset>
 
@@ -139,7 +139,7 @@
             <!-- STEP 5 — Review -->
             <fieldset class="wizard-step" data-step="5" data-name-fr="Confirmation" data-name-en="Review" style="border:0;padding:0;margin:0">
               <legend class="sr-only" data-en="Review">Confirmation</legend>
-              <h2 data-en="Everything look right?">Tout est exact&nbsp;?</h2>
+              <h2 data-en="Does everything look right?">Tout est exact&nbsp;?</h2>
               <dl class="summary" data-summary></dl>
               <div class="consent-wrap">
                 <label class="consent"><input type="checkbox" name="consent" value="yes" required data-consent><span data-en="I agree that Spartan uses this information to answer my request, in accordance with the <a href='privacy.html' target='_blank'>privacy policy</a> (Quebec Law 25).">J'accepte que Spartan utilise ces renseignements pour répondre à ma demande, conformément à la <a href="privacy.html" target="_blank">politique de confidentialité</a> (Loi 25).</span></label>
@@ -168,9 +168,10 @@
         <aside class="request-aside">
           <div class="card card-dark stack" style="--stack:12px">
             <span class="live-pill"><span class="pulse-dot"></span><span data-en="Emergency">Urgence</span></span>
-            <h3 class="h3" data-en="Right now? Call.">En ce moment&nbsp;? Appelez.</h3>
+            <h3 class="h3" data-en="Happening now? Report it.">En ce moment&nbsp;? Signalez-la.</h3>
             <p class="muted small" data-en="Our emergency line is answered 24 hours a day, 7 days a week.">Notre ligne d'urgence répond 24 heures sur 24, 7 jours sur 7.</p>
-            <a class="btn btn-emergency btn-block" href="tel:+15147726600"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>514-772-6600</a>
+            <a class="btn btn-emergency btn-block" href="emergency.html"><svg class="icon" aria-hidden="true"><use href="#i-siren"/></svg><span data-en="Emergency form (30 s)">Formulaire d'urgence (30 s)</span></a>
+            <a class="btn btn-ghost btn-block" href="tel:+15147726600" style="color:#fff"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>514-772-6600</a>
           </div>
           <div class="card stack" style="--stack:14px">
             <h3 class="h4" data-en="What happens next">La suite</h3>
