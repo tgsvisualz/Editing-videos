@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /credits.html
+Sitemap: https://www.spartanfire.ca/sitemap.xml
