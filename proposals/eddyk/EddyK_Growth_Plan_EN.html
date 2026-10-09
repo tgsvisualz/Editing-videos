@@ -91,6 +91,42 @@ body { font-weight: 400; }
 .map .pt.hq { font-family: var(--f-display); font-size: 16px; font-weight: 500; letter-spacing: 0; }
 .map .pt.hq i { width: 18px; height: 18px; background: var(--accent); border: 3px solid var(--dark); vertical-align: -4px; }
 .map .pt small { display: block; font-size: 6.5px; letter-spacing: .2em; color: var(--accent); margin-left: 23px; }
+
+/* Shoot plan + post list (calendar pages) */
+.shoot { display: grid; grid-template-columns: 150px 1fr; background: var(--card); border: 1px solid var(--line); margin-top: 12px; }
+.shoot .ph { height: 100%; min-height: 196px; position: relative; overflow: hidden; }
+.shoot .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.shoot .ph .no { position: absolute; left: 10px; top: 10px; background: var(--ink); color: #fff; font-family: var(--f-display); font-size: 22px; width: 38px; height: 38px; display: grid; place-items: center; }
+.shoot .bd { padding: 14px 16px; }
+.shoot .hd { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+.shoot .hd .h3 { font-size: 19px; }
+.shoot .meta { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.shoot .meta span { font-size: 7px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; padding: 3px 7px; background: var(--soft); white-space: nowrap; }
+.shoot .meta span.when { background: var(--accent); color: #fff; }
+.shoot .cols { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 14px; margin-top: 10px; }
+.shoot .cols .label { color: var(--accent); }
+.shoot ul { margin-top: 5px; }
+.shoot li { font-size: 8.6px; line-height: 1.45; padding-left: 10px; position: relative; margin-top: 3px; }
+.shoot li::before { content: ""; position: absolute; left: 0; top: 5px; width: 4px; height: 4px; background: var(--accent); }
+.noshoot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.noshoot > div { border: 1px dashed var(--line-strong); padding: 10px 14px; font-size: 8.6px; line-height: 1.5; }
+.noshoot b { display: block; font-size: 10px; margin-bottom: 2px; }
+.plist { margin-top: 10px; }
+.plist .hdr, .plist .pr { display: grid; grid-template-columns: 58px 58px 1fr 96px 100px; gap: 10px; align-items: center; }
+.plist .hdr { font-size: 6.5px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--muted); padding: 0 10px 4px 13px; }
+.plist .pr { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 4px 10px; margin-top: 2px; }
+.plist .pr.v { border-left-color: var(--ink); }
+.plist .dt { font-size: 8px; font-weight: 700; letter-spacing: .04em; }
+.plist .ty { font-size: 6.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; padding: 3px 0; text-align: center; border: 1px solid var(--ink); }
+.plist .pr.v .ty { background: var(--ink); color: #fff; }
+.plist .tt { font-size: 9.6px; font-weight: 700; line-height: 1.2; }
+.plist .ds { font-size: 8px; color: var(--muted); line-height: 1.35; margin-top: 1px; }
+.plist .src { font-size: 7.6px; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+.plist .src i { font-style: normal; flex: none; width: 15px; height: 15px; line-height: 15px; text-align: center; background: var(--accent); color: #fff; font-size: 7.5px; font-weight: 700; }
+.plist .src i.n { background: var(--soft); color: var(--ink); }
+.plist .cta { font-size: 7.6px; font-weight: 700; color: var(--accent); }
+.plist .wkb { background: var(--dark); color: var(--dark-ink); font-size: 7.6px; padding: 4px 10px; margin-top: 6px; display: flex; justify-content: space-between; gap: 10px; }
+.plist .wkb b { color: var(--accent-2); }
 </style>
 </head>
 <body>
@@ -443,27 +479,69 @@ body { font-weight: 400; }
   <div class="pillar"><div><div class="t"><span class="sq" style="background:#D4AE5E"></span><span class="h3">The film</span><span class="bd v">Video × 1</span><span class="bd p">Carousel × 1</span></div><p>Hero film cutdowns, behind the scenes, and My Day · Her Future.</p><div class="tags"><span class="pill">On set</span><span class="pill">Her future</span><span class="ctab">CTA · Watch the film</span></div></div><div class="thumb"><img src="assets/cliff.jpg"><span>2 / MONTH</span></div></div>
 </section>
 
-<!-- ================= 14 · CALENDAR ================= -->
-<section class="page" data-rail="10 — Content calendar · Month 1">
-  <div class="row" style="justify-content:space-between;align-items:flex-end"><h1 class="h1">November <em>2026</em></h1><div class="script" style="transform:rotate(-4deg);margin-bottom:12px">engagement season starts here →</div></div>
-  <p class="lead" style="margin-top:4px">16 pieces: 8 videos (dark tiles) and 8 carousels or posts, all produced by TGS. Each week's bar shows the campaign it feeds.</p>
-  <div class="cal-legend"><span><i style="background:#2C2826"></i>Gown up close</span><span><i style="background:#B8913F"></i>Find the one</span><span><i style="background:#C98E8E"></i>Real brides</span><span><i style="background:#8E6A4F"></i>The house</span><span><i style="background:#8FA287"></i>On the road</span><span><i style="background:#D4AE5E"></i>The film</span></div>
-  <div class="cal-days"><span>MONDAY</span><span>TUESDAY</span><span>THURSDAY</span><span>FRIDAY</span></div>
-  <div class="wk"><span><b>Week 1</b> B Book a try-on · C Become a retailer: pixel and Conversions API live</span><span>Brides · Boutiques</span></div>
-  <div class="cal"><div class="day v" style="border-top-color:#2C2826"><div class="d"><span>Nov 2</span><span>Video</span></div><div class="tt">Alba, in motion</div><div class="sub">Dreams 2027, lace up close</div></div><div class="day" style="border-top-color:#B8913F"><div class="d"><span>Nov 3</span><span>Carousel</span></div><div class="tt">Which collection are you?</div><div class="sub">Five collections, one quiz</div></div><div class="day v" style="border-top-color:#C98E8E"><div class="d"><span>Nov 5</span><span>Video</span></div><div class="tt">Kayla in Lillian</div><div class="sub">A coastal spring wedding</div></div><div class="day" style="border-top-color:#8E6A4F"><div class="d"><span>Nov 6</span><span>Post</span></div><div class="tt">Milano, 1994</div><div class="sub">A father, a son, a house of gowns</div></div></div>
-  <div class="wk"><span><b>Week 2</b> Hero film pre-production: casting, location, gowns · B scaled</span><span>Newly engaged · Curvy</span></div>
-  <div class="cal"><div class="day v" style="border-top-color:#2C2826"><div class="d"><span>Nov 9</span><span>Video</span></div><div class="tt">The Nashville train</div><div class="sub">Italia, from every angle</div></div><div class="day" style="border-top-color:#B8913F"><div class="d"><span>Nov 10</span><span>Carousel</span></div><div class="tt">Lace or satin?</div><div class="sub">Vote in the comments</div></div><div class="day v" style="border-top-color:#C98E8E"><div class="d"><span>Nov 12</span><span>Video</span></div><div class="tt">Made for every body</div><div class="sub">Curvy, 16W to 32W</div></div><div class="day" style="border-top-color:#D4AE5E"><div class="d"><span>Nov 13</span><span>Post</span></div><div class="tt">Coming soon: the film</div><div class="sub">Five brides. One day.</div></div></div>
-  <div class="wk"><span><b>Week 3</b> The hero shoot · D On the road: a radius around each event</span><span>Brides near an event</span></div>
-  <div class="cal"><div class="day v" style="border-top-color:#D4AE5E"><div class="d"><span>Nov 16</span><span>Video</span></div><div class="tt">On set, day one</div><div class="sub">Behind the hero film</div></div><div class="day" style="border-top-color:#8FA287"><div class="d"><span>Nov 17</span><span>Post</span></div><div class="tt">Reserve your spot</div><div class="sub">This weekend's Eddy K events</div></div><div class="day v" style="border-top-color:#8E6A4F"><div class="d"><span>Nov 19</span><span>Video</span></div><div class="tt">Meet Addy &amp; Andrea</div><div class="sub">The family behind the house</div></div><div class="day" style="border-top-color:#B8913F"><div class="d"><span>Nov 20</span><span>Carousel</span></div><div class="tt">When to order</div><div class="sub">8 to 10 months, explained</div></div></div>
-  <div class="wk"><span><b>Week 4</b> F Still comparing: viewers, savers, quiz takers, unfinished forms</span><span>All three</span></div>
-  <div class="cal"><div class="day v" style="border-top-color:#2C2826"><div class="d"><span>Nov 23</span><span>Video</span></div><div class="tt">Jolie, the details</div><div class="sub">Milano Couture, close up</div></div><div class="day" style="border-top-color:#C98E8E"><div class="d"><span>Nov 24</span><span>Post</span></div><div class="tt">In their words</div><div class="sub">Real Brides quotes</div></div><div class="day v" style="border-top-color:#8FA287"><div class="d"><span>Nov 25</span><span>Video</span></div><div class="tt">Said yes this weekend?</div><div class="sub">Events near you, this month</div></div><div class="day" style="border-top-color:#D4AE5E"><div class="d"><span>Nov 27</span><span>Post</span></div><div class="tt">Her future</div><div class="sub">What each gown supports</div></div></div>
-  <div class="wk" style="background:#4a433e"><span><b>Week 5</b> Monthly report: reach, try-on requests, retailer applications · December plan: the film launches</span><span></span></div>
-  <div class="cal"><div class="day rep" style="border-top-color:var(--accent)"><div class="d"><span>Nov 30</span><span></span></div><div class="tt">Monthly report</div><div class="sub">November results and the December launch plan</div></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
-  <div class="note mt12"><b>Brand-safe and Quebec-compliant.</b> Every piece is checked before it goes live: French at least as prominent as English for Quebec audiences under the Charter of the French Language, real brides and photographers shown only with written permission and credit, boutiques named only with their approval, My Day · Her Future described exactly as Plan International approves, and a copy of every ad kept on file.</div>
+<!-- ================= 14 · THE SHOOTS ================= -->
+<section class="page" data-rail="10 — The shoots · Month 1">
+  <div class="row" style="justify-content:space-between;align-items:flex-end"><h1 class="h1">What we <em>shoot</em></h1><div class="script" style="transform:rotate(-4deg);margin-bottom:12px">three shoots, one month →</div></div>
+  <p class="lead" style="margin-top:4px">All of November's content comes from three shoots. Each card shows what we film, what we need from you, and the posts it turns into.</p>
+  <div class="shoot"><div class="ph"><img src="assets/lace-city.jpg" style="object-position:50% 30%"><span class="no">1</span></div><div class="bd">
+    <div class="hd"><span class="h3">The gown shoot</span><span class="meta"><span class="when">Before Nov 2</span><span>1 day</span><span>Your showroom or our studio</span></span></div>
+    <div class="cols">
+      <div><div class="label">What we film</div><ul><li>Each gown walking, turning, the train in motion</li><li>Close-ups: lace, beading, buttons, the back</li><li>Photos of every gown for the carousels and ads</li></ul></div>
+      <div><div class="label">What we need from you</div><ul><li>6 sample gowns: Alba, Nashville, Jolie, 2 Curvy, 1 Sky</li><li>Your approval of the 2 models</li></ul></div>
+      <div><div class="label">It becomes</div><ul><li>5 of the 8 videos</li><li>The photos for every carousel</li><li>A photo bank for the ads</li></ul></div>
+    </div></div></div>
+  <div class="shoot"><div class="ph"><img src="assets/eddy-addy.jpg" style="object-position:50% 25%"><span class="no">2</span></div><div class="bd">
+    <div class="hd"><span class="h3">The family interview</span><span class="meta"><span class="when">Week 1</span><span>Half day</span><span>Your office</span></span></div>
+    <div class="cols">
+      <div><div class="label">What we film</div><ul><li>A sit-down interview with Eddy, Addy and Andrea</li><li>Hands at work: fittings, fabric, sketches</li><li>Your archive photos, from 1994 to today</li></ul></div>
+      <div><div class="label">What we need from you</div><ul><li>2 hours with the family</li><li>10 to 20 archive photos</li></ul></div>
+      <div><div class="label">It becomes</div><ul><li>"Milano, 1994" and "Meet Addy &amp; Andrea"</li><li>The December documentary episodes</li></ul></div>
+    </div></div></div>
+  <div class="shoot"><div class="ph"><img src="assets/cliff.jpg" style="object-position:50% 50%"><span class="no">3</span></div><div class="bd">
+    <div class="hd"><span class="h3">The hero film</span><span class="meta"><span class="when">Week 3</span><span>2 days</span><span>On location, by the sea</span></span></div>
+    <div class="cols">
+      <div><div class="label">What we film</div><ul><li>"Find the one": five brides, five collections, dawn to sunset</li><li>Behind the scenes, for social</li><li>Campaign photos</li></ul></div>
+      <div><div class="label">What we need from you</div><ul><li>5 gowns, one per collection</li><li>Your approval of the cast and the location</li></ul></div>
+      <div><div class="label">It becomes</div><ul><li>The hero film, launching in December</li><li>"On set, day one" and the teasers</li></ul></div>
+    </div></div></div>
+  <div class="noshoot">
+    <div><b>Real brides · no shoot</b>We edit the photos and clips couples already have, with their written permission and the photographer credited.</div>
+    <div><b>Designed posts · no shoot</b>Quizzes, timelines and event posts, made by our design team from the shoot photos.</div>
+  </div>
+</section>
+
+<!-- ================= 15 · CALENDAR ================= -->
+<section class="page alt" data-rail="11 — Content calendar · Month 1">
+  <div class="row" style="justify-content:space-between;align-items:flex-end"><h1 class="h1">November <em>2026</em></h1><div class="script" style="transform:rotate(-4deg);margin-bottom:12px">engagement season →</div></div>
+  <p class="lead" style="margin-top:4px">Every post this month: what the bride sees, which shoot it comes from, and what she's asked to do next. 8 videos, 8 posts or carousels.</p>
+  <div class="plist">
+    <div class="hdr"><span>Date</span><span>Type</span><span>The post and what it shows</span><span>Comes from</span><span>Call to action</span></div>
+    <div class="wkb"><span><b>Week 1</b> Launch: "Book a try-on" and "Become a retailer" ads go live</span><span>Brides · Boutiques</span></div>
+    <div class="pr v"><span class="dt">Mon Nov 2</span><span class="ty">Video</span><div><div class="tt">Alba, in motion</div><div class="ds">A model walks and turns in Alba (Dreams 2027). Close-ups of the lace. 20 seconds.</div></div><span class="src"><i>1</i>Gown shoot</span><span class="cta">Book a try-on</span></div>
+    <div class="pr"><span class="dt">Tue Nov 3</span><span class="ty">Carousel</span><div><div class="tt">Which collection are you?</div><div class="ds">A 6-slide quiz, one question per slide, ending on the five collections.</div></div><span class="src"><i class="n">D</i>Designed</span><span class="cta">Comment your answer</span></div>
+    <div class="pr v"><span class="dt">Thu Nov 5</span><span class="ty">Video</span><div><div class="tt">Kayla in Lillian</div><div class="ds">A real wedding, cut from the couple's own photos and clips.</div></div><span class="src"><i class="n">R</i>Real bride</span><span class="cta">Share your day</span></div>
+    <div class="pr"><span class="dt">Fri Nov 6</span><span class="ty">Post</span><div><div class="tt">Milano, 1994</div><div class="ds">An archive photo of Eddy and young Addy, and how the house began.</div></div><span class="src"><i>2</i>Archive photo</span><span class="cta">Follow the story</span></div>
+    <div class="wkb"><span><b>Week 2</b> Hero film prep: casting, location, gowns · try-on ads scaled</span><span>Newly engaged · Curvy</span></div>
+    <div class="pr v"><span class="dt">Mon Nov 9</span><span class="ty">Video</span><div><div class="tt">The Nashville train</div><div class="ds">Nashville (Italia) from every angle, the train moving as she walks.</div></div><span class="src"><i>1</i>Gown shoot</span><span class="cta">Book a try-on</span></div>
+    <div class="pr"><span class="dt">Tue Nov 10</span><span class="ty">Carousel</span><div><div class="tt">Lace or satin?</div><div class="ds">Two gowns side by side over 5 slides. Brides vote in the comments.</div></div><span class="src"><i class="n">D</i>Designed</span><span class="cta">Vote in the comments</span></div>
+    <div class="pr v"><span class="dt">Thu Nov 12</span><span class="ty">Video</span><div><div class="tt">Made for every body</div><div class="ds">A Curvy model in two Curvy gowns (16W to 32W): the fit, the movement.</div></div><span class="src"><i>1</i>Gown shoot</span><span class="cta">Find a Curvy boutique</span></div>
+    <div class="pr"><span class="dt">Fri Nov 13</span><span class="ty">Post</span><div><div class="tt">Coming soon: the film</div><div class="ds">One still from casting and the release month. The film's first teaser.</div></div><span class="src"><i class="n">D</i>Designed</span><span class="cta">Turn on notifications</span></div>
+    <div class="wkb"><span><b>Week 3</b> The hero film shoot · event ads around each Eddy K event</span><span>Brides near an event</span></div>
+    <div class="pr v"><span class="dt">Mon Nov 16</span><span class="ty">Video</span><div><div class="tt">On set, day one</div><div class="ds">Behind the scenes of the hero film: the brides, the crew, the coast at dawn.</div></div><span class="src"><i>3</i>Hero film shoot</span><span class="cta">Follow for the film</span></div>
+    <div class="pr"><span class="dt">Tue Nov 17</span><span class="ty">Post</span><div><div class="tt">Reserve your spot</div><div class="ds">Dates and cities of this month's Eddy K events.</div></div><span class="src"><i class="n">D</i>Designed</span><span class="cta">Reserve your spot</span></div>
+    <div class="pr v"><span class="dt">Thu Nov 19</span><span class="ty">Video</span><div><div class="tt">Meet Addy &amp; Andrea</div><div class="ds">A 45-second interview: the family on why they make gowns.</div></div><span class="src"><i>2</i>Family interview</span><span class="cta">Follow the story</span></div>
+    <div class="pr"><span class="dt">Fri Nov 20</span><span class="ty">Carousel</span><div><div class="tt">When to order your gown</div><div class="ds">Order 8 to 10 months before the wedding, step by step.</div></div><span class="src"><i class="n">D</i>Designed</span><span class="cta">Save for later</span></div>
+    <div class="wkb"><span><b>Week 4</b> "Still comparing" ads: people who watched, saved or started a form</span><span>All three</span></div>
+    <div class="pr v"><span class="dt">Mon Nov 23</span><span class="ty">Video</span><div><div class="tt">Jolie, the details</div><div class="ds">Macro shots of Jolie (Milano Couture): the beading, the buttons, the back.</div></div><span class="src"><i>1</i>Gown shoot</span><span class="cta">Book a try-on</span></div>
+    <div class="pr"><span class="dt">Tue Nov 24</span><span class="ty">Post</span><div><div class="tt">In their words</div><div class="ds">Real brides' quotes over their wedding photos.</div></div><span class="src"><i class="n">R</i>Real bride</span><span class="cta">Tag your bride</span></div>
+    <div class="pr v"><span class="dt">Thu Nov 26</span><span class="ty">Video</span><div><div class="tt">Said yes this weekend?</div><div class="ds">A quick gown montage: congratulations, and where to try one on.</div></div><span class="src"><i>1</i>Gown shoot</span><span class="cta">Find your boutique</span></div>
+    <div class="pr"><span class="dt">Fri Nov 27</span><span class="ty">Post</span><div><div class="tt">Her future</div><div class="ds">What My Day · Her Future supports, over a gown photo.</div></div><span class="src"><i class="n">D</i>Designed</span><span class="cta">Learn more</span></div>
+    <div class="wkb" style="background:#4a433e"><span><b>Mon Nov 30</b> Monthly report: reach, try-on requests, retailer applications · December plan: the film launches</span><span></span></div>
+  </div>
 </section>
 
 <!-- ================= 15 · CAMPAIGNS ================= -->
-<section class="page alt" data-rail="11 — The campaigns">
+<section class="page alt" data-rail="12 — The campaigns">
   <h1 class="h1">Campaigns built<br><em>around the film</em></h1>
   <p class="lead">Every campaign has a page on the site you already have. The month's 16 TGS pieces become the ads, the film leads, and the budget follows what brings brides into boutiques and boutiques to Eddy K.</p>
   <div class="g3 mt16">
@@ -480,7 +558,7 @@ body { font-weight: 400; }
 </section>
 
 <!-- ================= 16 · ROADMAP ================= -->
-<section class="page" data-rail="12 — The roadmap">
+<section class="page" data-rail="13 — The roadmap">
   <h1 class="h1">90 days,<br><em>step by step</em></h1>
   <p class="lead" style="margin-top:6px">Three months to shoot the film, launch it and open new markets, then keep it running.</p>
   <table class="road">
@@ -497,7 +575,7 @@ body { font-weight: 400; }
 </section>
 
 <!-- ================= 17 · OFFER ================= -->
-<section class="page alt" data-rail="13 — The offer">
+<section class="page alt" data-rail="14 — The offer">
   <h1 class="h1">The TGS experience,<br><em>at one price</em></h1>
   <p class="lead">One package, our premium package, for 90 days. Nothing to stack: the hero film, the content, the campaigns and the strategy to scale.</p>
   <div class="offer">
@@ -529,7 +607,7 @@ body { font-weight: 400; }
 </section>
 
 <!-- ================= 18 · NEXT STEPS ================= -->
-<section class="page" data-rail="14 — Next steps">
+<section class="page" data-rail="15 — Next steps">
   <h1 class="h1">What's next, <em>step by step</em></h1>
   <p class="lead" style="margin-top:6px">Six steps to the November 2 start.</p>
   <ul class="steps6 mt12">
