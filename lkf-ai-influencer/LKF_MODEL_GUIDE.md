@@ -38,7 +38,13 @@ The one rulebook for generating the LKF masked model. Follow it exactly every ti
 **Brief:**
 > High-fashion editorial muse for LKF, a luxury fashion label. Platinum blonde hair, wet-look, slicked tightly back into a sleek low bun, no loose strands. Always wears a black guipure lace masquerade eye mask with an ornate filigree peak at the center of the forehead, open almond eye cutouts and a scalloped lower edge. Ice-blue almond eyes, long defined lashes, warm bronze smoky shadow, glossy deep crimson lipstick, deep red nails. Light skin with a luminous golden glow and real skin texture. Photographed on a pure black background with a hard warm side key light and golden rim light, high-contrast chiaroscuro, 85mm lens, luxury campaign quality.
 
-**After it generates:** pick the best sheet and record its seed here → `SEED: ________`
+### ✅ Official sheet (locked)
+- **Winner:** Sheet 1, job ID `a5b605ef-db52-4a62-8efa-fe9bee7a38c0` (2026-10-14)
+- [View sheet](https://d8j0ntlcm91z4.cloudfront.net/user_39RDb4wrKRTZ3kBNp7tSgdxydbo/hf_20261014_060945_a5b605ef-db52-4a62-8efa-fe9bee7a38c0.png)
+- Reference media IDs: identity close-up `c0d2cef2-3c10-434e-913f-83db6f492fbe` · style shot `ddddc36c-8011-47db-b334-232729986536`
+- **Known drift to correct:** the sheet shows a centre parting. Always write "slicked tightly straight back with **no parting**".
+- The sheet is on white. That's normal for sheets; the black background and golden light come from each shot's prompt.
+
 Don't rebuild the character after this point. Every new image comes from this sheet.
 
 ---
@@ -51,14 +57,15 @@ Don't rebuild the character after this point. Every new image comes from this sh
 3. Train a **Soul ID** on the keepers.
 4. Generate with **Higgsfield Soul 2.0**, with that Soul ID selected, at 2k quality.
 
-### Option B: Reference images (quick)
-Use **Nano Banana Pro**. Attach the character sheet and `lkf_identity.jpg` to every generation.
+### Option B: Reference images (quick, ~2 credits/image)
+Use **Nano Banana Pro** at 2k. Attach the official sheet (job `a5b605ef-…`) **and** the identity close-up (`c0d2cef2-…`) to every generation.
 
 ### Master prompt template
 Only the bracketed parts change. Everything else stays word for word.
 
 ```
-LKF muse: platinum blonde hair slicked tightly back into a sleek low bun,
+The exact same woman from the reference images, identical face and identical mask.
+LKF muse: platinum blonde hair slicked tightly straight back with no parting, sleek low bun,
 black guipure lace masquerade eye mask with filigree forehead peak,
 ice-blue eyes, glossy deep crimson lips, deep red nails.
 Wearing [OUTFIT].
