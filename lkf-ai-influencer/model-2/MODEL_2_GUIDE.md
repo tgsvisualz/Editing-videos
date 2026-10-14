@@ -38,7 +38,8 @@ The shared rules (checklist, consistency rules, brand look) are in `../LKF_MODEL
 
 ### ✅ Official sheet
 - Winner: `________` (job ID) · Date: `________`
-- Reference media IDs: identity `________` · style `________`
+- Reference media IDs: identity `ce7cb01f-682c-4f46-8a52-703478aa56d2` · style `5d19b58c-b18d-4ca6-870e-13d3b75a3ad8`
+- Sheet candidates (2026-10-14): 1 `98a71d0f-522a-4085-b7fe-1ce808d32e58` · 2 `3aff6a75-3a43-40dc-a0ce-50e7615cb7c5` · 3 `58e1ed41-6c6f-4a1d-9092-b5e688a03cca` · 4 `21a14600-7f88-4a68-a4b9-a78ff5155d81`
 
 ---
 
