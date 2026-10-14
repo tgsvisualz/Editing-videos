@@ -146,3 +146,26 @@ Paste the **identity block**, then the **shot line**, then the **realism block**
 | 10 | 3:4 | Night street, standing under a warm streetlamp, long black wool coat, wet pavement reflections, shallow depth of field. |
 
 **Keep / delete rules:** keep only images where mask, hair (no parting), crimson lips, ice-blue eyes and hands are all correct. Aim for 20–25 keepers: ~40% close-ups, ~35% waist-up, ~25% full body, with at least 4 that aren't on a black background. Then train the Soul ID.
+
+---
+
+## 8. Video ad: "The Shoot" (studio walk-in + camera flashes)
+
+Make the **start frame** as a still image first, then animate it (image-to-video). Starting from her still keeps her face and mask locked; text-to-video drifts.
+
+### Step 1: Start frame (Nano Banana Pro · 4k · 9:16 · refs: official sheet + identity close-up)
+```
+Photorealistic photograph of the exact same woman from the reference images, identical face and identical mask. Black guipure lace masquerade eye mask with an ornate filigree peak at the center of the forehead, open almond eye cutouts and a scalloped lower edge. Platinum blonde hair, wet-look, slicked tightly straight back with no parting into a sleek low bun. Ice-blue eyes, long lashes, glossy deep crimson lips, deep red nails. Tall slim model wearing a black satin plunging-neckline slip dress and black pointed stiletto heels. Full-length, standing at the edge of a high-end professional photo studio on a seamless black backdrop, one foot stepping forward onto a glossy black floor, confident, sultry expression. Large softbox and beauty-dish lights on stands at the sides of the frame, warm golden key light, subtle haze in the air. Shot on a full-frame cinema camera, 35mm lens, natural skin texture, true-to-life color, luxury fashion campaign, no text, no logos.
+```
+
+### Step 2: Animate (image-to-video · 9:16 · 8–10 s · use the still as the first frame)
+```
+Luxury fashion campaign ad. The masked model walks slowly into the center of a professional photo studio with a confident runway stride, hips swaying, heels clicking on the glossy black floor. She stops on her mark, plants one hip, rolls her shoulders back and turns her face toward the camera with a sultry, self-assured look. She holds a series of editorial poses: hand on hip, chin lifted; a three-quarter turn looking over her shoulder; one hand lightly touching the edge of her lace mask. Bright white photographer camera flashes burst repeatedly from off-camera left and right, each flash briefly lighting her skin, the satin dress and the lace mask, with sharp highlights and quick shadows, like a live high-fashion photo shoot. Slow cinematic push-in from full body to a waist-up shot as she poses. Warm golden ambient studio light between flashes, subtle haze, shallow depth of field. Her face, mask, platinum slicked-back bun and crimson lips stay consistent throughout. Photorealistic, smooth natural motion, 24fps film look.
+```
+
+**Tips**
+- Video model: pick a high-quality image-to-video model in Higgsfield (Kling / Veo / Seedance class). Run 2–4 takes and keep the best.
+- If the flashes are too weak, add: "intense strobe flashes, flashes pop every half second".
+- If she walks too fast or poses too many times, cut the pose list down to 2.
+- Add the LKF logo, "Limited drops. Online only." and "[ SHOP THE DROP ] lkfashion.ca" in your editor on the last 2 seconds. Don't put text in the generation prompt.
+- Sound: camera shutter clicks + flash pops over a slow, deep bass track.
