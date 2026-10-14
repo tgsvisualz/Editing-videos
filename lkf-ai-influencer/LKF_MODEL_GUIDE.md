@@ -118,3 +118,31 @@ Any box unchecked → regenerate. Don't post near-misses: drift adds up and the 
 - Palette: black `#000000`, warm ivory text `#E8E0D6`, crimson accent `#8B0A14`, golden skin highlight
 - Type: tall high-contrast serif for "L K F" with wide letter-spacing, italic serif for the tagline, monospace for CTAs (`[ SHOP THE DROP ]`)
 - Tagline: *Limited drops. Online only.* · lkfashion.ca
+
+---
+
+## 7. Building the Soul ID training set (batches of 4)
+
+**Settings for every batch:** Nano Banana Pro · 2k · batch 4 · references: official sheet (job `a5b605ef-…`) + identity close-up (`c0d2cef2-…`).
+Paste the **identity block**, then the **shot line**, then the **realism block**.
+
+**Identity block**
+> Photorealistic photograph of the exact same woman from the reference images, identical face and identical mask. Black guipure lace masquerade eye mask with an ornate filigree peak at the center of the forehead, open almond eye cutouts and a scalloped lower edge. Platinum blonde hair, wet-look, slicked tightly straight back with no parting into a sleek low bun, no loose strands. Ice-blue eyes, long lashes, glossy deep crimson lips, deep red nails.
+
+**Realism block**
+> Shot on a full-frame camera, 85mm lens, natural skin texture with visible pores and fine peach fuzz, subtle film grain, true-to-life color, no airbrushing, no CGI or illustration look, no text, no logos.
+
+| # | Ratio | Shot line |
+|---|---|---|
+| 1 | 4:5 | Straight-on head-and-shoulders portrait, neutral expression, looking directly into the lens, bare shoulders. Pure black background, warm hard side light, golden rim light. |
+| 2 | 4:5 | Left side profile portrait, chin slightly raised, lips slightly parted. Black background, warm rim light tracing her profile. |
+| 3 | 4:5 | Three-quarter view turned to her right, eyes glancing back at camera, faint closed-lip smile. Black background, warm key light. |
+| 4 | 4:5 | Over-the-shoulder portrait, back to camera in a black backless satin dress, head turned toward the lens. Black background, golden rim light on her shoulder. |
+| 5 | 3:4 | Waist-up, black tailored blazer worn with nothing underneath, gold hoop earrings, hand touching the edge of the mask. Soft warm studio light on a charcoal grey backdrop. |
+| 6 | 3:4 | Waist-up, glossy cream cropped puffer with oversized white faux-fur collar, both hands pulling the collar up around her neck. Black background, warm side light. |
+| 7 | 9:16 | Full-length, walking toward camera mid-stride, black satin slip dress and black pointed heels. Black studio, warm spotlight from above, soft glow on the floor. |
+| 8 | 9:16 | Full-length, seated sideways on a black velvet chair, legs crossed, black wide-leg trousers and a cream silk blouse. Warm low-key light, black background. |
+| 9 | 4:5 | Close-up in soft diffused daylight from a large window, neutral warm-grey wall, relaxed expression. |
+| 10 | 3:4 | Night street, standing under a warm streetlamp, long black wool coat, wet pavement reflections, shallow depth of field. |
+
+**Keep / delete rules:** keep only images where mask, hair (no parting), crimson lips, ice-blue eyes and hands are all correct. Aim for 20–25 keepers: ~40% close-ups, ~35% waist-up, ~25% full body, with at least 4 that aren't on a black background. Then train the Soul ID.
