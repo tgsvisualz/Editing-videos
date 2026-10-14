@@ -37,7 +37,7 @@ The shared rules (checklist, consistency rules, brand look) are in `../LKF_MODEL
 > High-fashion editorial muse for LKF, a luxury fashion label. Glossy dark espresso-brown hair slicked tightly back with no parting into a long sleek low ponytail. Always wears a black guipure lace masquerade eye mask with an ornate filigree peak at the center of the forehead, open almond eye cutouts and a scalloped lower edge. Deep brown almond eyes, long lashes, smoky bronze eyeshadow, sharp dark brows, glossy deep crimson lipstick. Warm olive skin with a golden glow and real skin texture, sculpted cheekbones, strong elegant jawline. Slim athletic build, very tall, long legs. Photographed on a pure black background with a hard warm side key light and golden rim light, high-contrast chiaroscuro, 85mm lens, luxury campaign quality.
 
 ### ✅ Official sheet
-- Winner: `________` (job ID) · Date: `________`
+- **Winner: Sheet 1, job ID `98a71d0f-522a-4085-b7fe-1ce808d32e58`** (2026-10-14)
 - Reference media IDs: identity `ce7cb01f-682c-4f46-8a52-703478aa56d2` · style `5d19b58c-b18d-4ca6-870e-13d3b75a3ad8`
 - Sheet candidates (2026-10-14): 1 `98a71d0f-522a-4085-b7fe-1ce808d32e58` · 2 `3aff6a75-3a43-40dc-a0ce-50e7615cb7c5` · 3 `58e1ed41-6c6f-4a1d-9092-b5e688a03cca` · 4 `21a14600-7f88-4a68-a4b9-a78ff5155d81`
 
@@ -67,3 +67,32 @@ Attach **her** official sheet + **her** identity close-up every time.
 | 10 | 3:4 | Night city street, three-quarter body under neon-warm shop lights, black trench coat, rain-wet pavement, shallow depth of field. |
 
 Keep / delete rules: same as Muse I (`../LKF_MODEL_GUIDE.md` section 7). Watch especially for: **ponytail turning into a bun**, **eyes turning blue/green**, **skin lightening**, and **her face drifting toward Muse I**.
+
+---
+
+## 4. Soul ID training set (batch 1, 2026-10-14)
+
+20 × Nano Banana Pro at 4k (80 credits), refs = official sheet + identity close-up. Mix: 8 close-ups · 7 waist-up · 5 full body · 7 non-black settings.
+
+| # | Shot | Job ID |
+|---|---|---|
+| 1 | Front portrait, turtleneck, black | `aa691bff-966b-4526-910a-39db3d673f4f` |
+| 2 | Right profile, ponytail | `ce62ab82-1051-4d79-a2e9-07f21cdac1d3` |
+| 3 | ¾ left, eyes to camera | `d883cd52-bc26-4b35-82dc-dd9f22d27a5b` |
+| 4 | Chin down, eyes up, top light | `bbf5f169-fbae-4c74-808d-d80c1e6074f8` |
+| 5 | ¾ right smile, beige studio | `63cb6db1-1d44-4db7-a22f-03bfda63f416` |
+| 6 | Window daylight close-up | `c17dfff2-c7af-4455-8889-03c0a2b75cb5` |
+| 7 | Left profile, eyes closed | `5f094582-4cde-4472-8de6-94557dbbff7a` |
+| 8 | Over the shoulder, backless dress | `9e3ca191-bd0a-4f19-a885-f5538b9f1bec` |
+| 9 | Waist-up tank, hand on ponytail | `abdaa490-e85c-45ce-95d5-144da4c4f51a` |
+| 10 | Leather jacket, grey backdrop | `46f7322a-0fd4-46be-b5df-c7401ff8929a` |
+| 11 | Camel blazer, light grey studio | `6cabdf48-87c7-4d21-90f8-2b21b822d675` |
+| 12 | Café, slip dress, daylight | `77af6e8a-c27f-4b77-bbae-774b2cffe46e` |
+| 13 | Balcony, knit, golden hour | `755e3204-4509-4a1a-a8f6-1f12f4125dc4` |
+| 14 | White shirt, touching mask | `650923a7-b7d2-4c09-9afb-20ecfb89bd97` |
+| 15 | Night street, trench | `c910eb09-0a29-4741-9b18-64793db3f72a` |
+| 16 | Full-length denim, over shoulder | `356d4d07-eecd-4da7-b898-6e89b38956f5` |
+| 17 | Full-length walk, camel coat | `dbf4cbfe-7b45-457b-a960-2c89911f4163` |
+| 18 | Full-length, leaning on wall | `5b47583e-c401-4ade-92ab-0f6cfdaf8b3a` |
+| 19 | Full-length seated, red dress | `3119c21f-4eaa-4f3c-9f71-f02d4be5a5b2` |
+| 20 | Full-length, daylight city street | `db35f426-bf94-4e38-bb40-0bf5f1d374a9` |
